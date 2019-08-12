@@ -22,5 +22,10 @@ public class User {
 		user.id = 1;
 		System.out.println(user);
 	}
+	public static void main2(String[] args) {
+		User user = new User();
+		user.id = 1;
+		System.out.println(user);
+	}
 	    
 }
