@@ -62,14 +62,14 @@ public class OrderItemDao {
 					p.setPname(rs.getString("name"));
 					p.setPnum(rs.getInt("pnum"));
 					p.setPrice(rs.getDouble("price"));
-					item.setP(p);
+					item.setPid(p);
 
 					items.add(item);
 				}
 
 				return items;
 			}
-		}, order.getId());
+		}, order.getOid());
 	}
 	//根据订单id删除订单项
 //	public void delOrderItems(String id) throws SQLException {
