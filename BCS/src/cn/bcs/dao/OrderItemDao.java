@@ -5,6 +5,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.ResultSetHandler;
+
+import cn.bcs.bean.Order;
+import cn.bcs.bean.OrderItem;
+import cn.bcs.bean.Product;
+import cn.bcs.utils.DataSourceUtils;
+
+
 
 public class OrderItemDao {
 
@@ -20,8 +29,8 @@ public class OrderItemDao {
 		Object[][] params = new Object[items.size()][3];
 
 		for (int i = 0; i < params.length; i++) {
-			params[i][0] = items.get(i).getOrder().getId();
-			params[i][1] = items.get(i).getP().getId();
+			params[i][0] = items.get(i).getOid().getOid();
+			params[i][1] = items.get(i).getPid().getPid();
 			params[i][2] = items.get(i).getBuynum();
 		}
 
@@ -31,7 +40,7 @@ public class OrderItemDao {
 	// 根据订单查找订单项.并将订单项中商品查找到。
 	public List<OrderItem> findOrderItemByOrder(final Order order)
 			throws SQLException {
-		String sql = "select * from orderItem,Products where products.id=orderItem.product_id and order_id=?";
+		String sql = "select * from orderItem,Products where products.Pid=orderItem.Pid and Oid=?";
 
 		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
 
@@ -42,15 +51,15 @@ public class OrderItemDao {
 				while (rs.next()) {
 					OrderItem item = new OrderItem();
 
-					item.setOrder(order);
+					item.setOid(order);
 					item.setBuynum(rs.getInt("buynum"));
 
 					Product p = new Product();
-					p.setCategory(rs.getString("category"));
-					p.setId(rs.getString("id"));
+					p.setCid(rs.getString("category"));
+					p.setPid(rs.getString("id"));
 					p.setDescription(rs.getString("description"));
 					p.setImgurl(rs.getString("imgurl"));
-					p.setName(rs.getString("name"));
+					p.setPname(rs.getString("name"));
 					p.setPnum(rs.getInt("pnum"));
 					p.setPrice(rs.getDouble("price"));
 					item.setP(p);
@@ -63,11 +72,11 @@ public class OrderItemDao {
 		}, order.getId());
 	}
 	//根据订单id删除订单项
-	public void delOrderItems(String id) throws SQLException {
-		String sql="delete from orderItem where order_id=?";
-		
-		QueryRunner runner=new QueryRunner();
-		
-		runner.update(DataSourceUtils.getConnection(),sql,id);
-	}
+//	public void delOrderItems(String id) throws SQLException {
+//		String sql="delete from orderItem where order_id=?";
+//		
+//		QueryRunner runner=new QueryRunner();
+//		
+//		runner.update(DataSourceUtils.getConnection(),sql,id);
+//	}
 }

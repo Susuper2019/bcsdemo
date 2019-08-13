@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import cn.itcast.itcaststore.domain.OrderItem;
+import cn.bcs.bean.OrderItem;
 
 public class Order {
-	private String Oid; // ¶©µ¥±àºÅ
-	private Date ordertime; // ÏÂµ¥Ê±¼ä
-	private double total; // ¶©µ¥×Ü¼Û
-	private int state; // ¶©µ¥×´Ì¬
-	private String address; // ËÍ»õµØÖ·
-	private String name; // ÊÕ»õÈËÐÕÃû
-	private String telePhone; // ÊÕ»õÈËµç»°
-	private User username; // ¶©µ¥ËùÊôÓÃ»§
+	private String Oid; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private Date ordertime; // ï¿½Âµï¿½Ê±ï¿½ï¿½
+	private double total; // ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼ï¿½
+	private int state; // ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	private String address; // ï¿½Í»ï¿½ï¿½ï¿½Ö·
+	private String name; // ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private String telePhone; // ï¿½Õ»ï¿½ï¿½Ëµç»°
+	private User username; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½
 	
 	private List<OrderItem> orderItems = new ArrayList<OrderItem>();
 	

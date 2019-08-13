@@ -85,7 +85,7 @@ public class ProductDao {
 
 			for (int i = 0; i < params.length; i++) {
 				params[i][0] = items.get(i).getBuynum();
-				params[i][1] = items.get(i).getP().getId();
+				params[i][1] = items.get(i).getPid().getPid();
 			}
 
 			runner.batch(DataSourceUtils.getConnection(), sql, params);

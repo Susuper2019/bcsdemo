@@ -5,6 +5,7 @@ public class OrderItem {
 	private Order Oid;
 	private Product Pid;
 	private int buynum;
+	
 	public Order getOid() {
 		return Oid;
 	}
