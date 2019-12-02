@@ -13,15 +13,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/c3p0-0.9.1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/commons-beanutils-1.8.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/commons-dbutils-1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/commons-fileupload-1.2.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/commons-io-1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/新建文件夹/jstl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/新建文件夹/mail.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/新建文件夹/mysql-connector-java-5.0.8-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/新建文件夹/mysql-connector-java-5.1.37-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/新建文件夹/standard.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-dbutils-1.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/fastjson-1.2.47.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

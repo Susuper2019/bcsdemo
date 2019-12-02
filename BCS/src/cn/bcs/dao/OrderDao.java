@@ -1,16 +1,40 @@
 package cn.bcs.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
+import org.junit.Test;
+
+import com.sun.org.apache.regexp.internal.recompile;
+
 import cn.bcs.bean.Order;
 import cn.bcs.bean.User;
 import cn.bcs.utils.DataSourceUtils;
 
 public class OrderDao {
+	@Test
+	public User selectUsers() {
+		QueryRunner runner = new QueryRunner();
+		String sql = "select *  from user where id=1";
+		User user = null;
+//		runner.query(DataSourceUtils.getConnection(), "select * from user", new ScalarHandler());
+		try {
+			user = (User)runner.query(DataSourceUtils.getConnection(),sql,new BeanHandler(User.class));
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return user;
+	}
 	/**
 	 *  生成订单
 	 * @param order

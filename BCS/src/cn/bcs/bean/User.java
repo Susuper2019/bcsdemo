@@ -1,9 +1,9 @@
 package cn.bcs.bean;
 
 public class User {
-	private int id; // ÓÃ»§±àºÅ
-	private String username; // ÓÃ»§ĞÕÃû
-	private String password; // ÓÃ»§ÃÜÂë
+	private int id; // ï¿½Ã»ï¿½ï¿½ï¿½ï¿½
+	private String username; // ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+	private String password; // ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
 	public int getId() {
 		return id;
 	}
@@ -22,8 +22,9 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password="
-				+ password + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
 	}
+	
 }
